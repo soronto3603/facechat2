@@ -21,10 +21,11 @@ function click_menu(btn_n){
 }
 function reload_data(){
   window.parent.postMessage('reload',"*");
+  document.getElementById('load').style.display="block";
 }
 function click_face_chat_btn(){
   if(sel_id==null || sel_name==null){
-    alert("선택하지 않았음");
+    alert("유저를 선택해주세요.");
     return;
   }
   window.parent.postMessage('{"title":"facechat","id":"'+sel_id+'","name":"'+sel_name+'"}',"*");
@@ -35,7 +36,7 @@ function swiperAppendSlide(imguri,sex,name,loc,id){
   var html='<div class="swiper-slide">';
   html+='<center>';
   html+='<div id=content_container'+id+' class=content_container onclick="select_it(\''+id+'\',\''+name+'\');toggle_select('+id+')">';
-  html+='<img src="./profileimg/'+imguri+'" width=200 height=200>';
+  html+='<img class=content_img src="./profileimg/'+imguri+'" width=200 height=200>';
   html+='<div class=profile_text>'+name+sex+loc+'</div>';
   html+='</div></center></div>';
   swiper.appendSlide(html);
@@ -43,6 +44,12 @@ function swiperAppendSlide(imguri,sex,name,loc,id){
 function toggle_select(id){
   $('.content_container').removeClass("content_select");
   $('#content_container'+id).addClass("content_select");
+}
+function add_textuser(){
+  var jisu='<div class="swiper-slide"><center>  <div id=content_container class=content_container onclick="alert(\'테스트유저로서 선택할 수 없습니다.\')">  <img class=content_img src="./profileimg/jisu.JPG" width=200 height=200>    <div class=profile_text>지수</div>  </div>  </center>  </div>';
+  var iu='<div class="swiper-slide"><center>  <div id=content_container class=content_container onclick="alert(\'테스트유저로서 선택할 수 없습니다.\')"><img class=content_img src="./profileimg/iu.JPG" width=200 height=200>  <div class=profile_text>아이유</div>  </div>  </center></div>';
+  swiper.appendSlide(jisu);
+  swiper.appendSlide(iu);
 }
 window.onload=()=>{
 
@@ -67,8 +74,10 @@ window.onmessage=(e)=>{
       user_array.push(user);
     }
     swiper.removeAllSlides();
+    add_textuser();
     for(var i=0;i<user_array.length;i++){
       swiperAppendSlide("hyojin.JPG","",user_array[i].full_name,"",user_array[i].id);
     }
+    document.getElementById('load').style.display="none";
   }
 }

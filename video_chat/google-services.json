@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "880431071183",
+    "firebase_url": "https://facechat-7a4ae.firebaseio.com",
+    "project_id": "facechat-7a4ae",
+    "storage_bucket": "facechat-7a4ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880431071183:android:3fb7a698b5fabadf",
+        "android_client_info": {
+          "package_name": "com.hume.facechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880431071183-vdjfg9kv5a8nt92jf4psr6jnq98hraqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyMOFIrBPedf_7lMeKkJ1KMpSGuX_rYxk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

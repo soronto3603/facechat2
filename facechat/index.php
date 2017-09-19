@@ -7,6 +7,12 @@
   <script src="./Swiper-3.4.2/dist/js/swiper.js"></script>
 </head>
 <body>
+  <div id=load>
+    <center>
+      <div style="width:1px;height:1px;top-margin:45%;"></div>
+      <img src="./img/Spinner.gif" width=100 height=100>
+    </center>
+  </div>
   <div class=top>
     <div class=title_container>
       <p class=title_text>BeautyCAM</p>
@@ -27,35 +33,26 @@
   </div>
   <div class=card_container>
     <div class="swiper-container">
-        <div class="swiper-scrollbar"></div>
         <!-- <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div> -->
         <div class="swiper-wrapper">
-            <!-- <div class="swiper-slide">
+            <div class="swiper-slide">
 
               <center>
-                <div id=content_container class=content_container onclick="select_it('id','효진');toggle_select();">
-                  <img src="./profileimg/hyojin.JPG" width=200 height=200>
-                  <div class=profile_text>여/공효진/36</div>
+                <div id=content_container class=content_container onclick="alert('테스트유저로서 선택할 수 없습니다.')">
+                  <img  class=content_img src="./profileimg/jisu.JPG" width=200 height=200>
+                  <div class=profile_text>지수</div>
                 </div>
               </center>
             </div>
             <div class="swiper-slide">
               <center>
-                <div id=content_container class=content_container onclick="select_it('id','지민');toggle_select();">
-                  <img src="./profileimg/jimin.JPG" width=200 height=200>
-                  <div class=profile_text>여/한지민/33</div>
+                <div id=content_container class=content_container onclick="alert('테스트유저로서 선택할 수 없습니다.')">
+                  <img  class=content_img src="./profileimg/iu.JPG" width=200 height=200>
+                  <div class=profile_text>아이유</div>
                 </div>
               </center>
             </div>
-            <div class="swiper-slide">
-              <center>
-                <div id=content_container class=content_container onclick="select_it('id','예슬');toggle_select();">
-                  <img src="./profileimg/yesl.JPG" width=200 height=200>
-                  <div class=profile_text>여/한예슬/32</div>
-                </div>
-              </center>
-            </div> -->
         </div>
 
         <!-- <div class="swiper-pagination"></div> -->
